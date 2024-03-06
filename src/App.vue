@@ -3,9 +3,9 @@
   const nome2 = 'Vitória'
     const idade = 16;
 
-    function inverter(texto) {
-        return texto.split('').reverse().join('')
-    }
+    function inverterMaiuscula(texto) {
+    return texto.split('').reverse().join('').toUpperCase();
+  }
 
     function saudacao() {
         return `Olá, ${nome} e ${nome2}!`
@@ -26,6 +26,7 @@
   function recomeçar() {
     contador.value = 0
   }
+  
 </script>
 
 <template>
@@ -39,8 +40,8 @@
           <p>Para completar 50 anos faltam: {{ 50 - idade }}  anos.</p>
           <p>O nome Ruama tem {{ nome.length }}  caracteres.</p>
           <p>O nome Vitória tem {{ nome2.length }}  caracteres.</p>
-          <p>O nome Ruama invertido é: {{ inverter(nome) }}.</p>
-          <p>O nome Vitória invertido é: {{ inverter(nome2) }}.</p>
+          <p>O nome Ruama invertido em maiúscula é: {{ inverterMaiuscula(nome) }}.</p>
+          <p>O nome Vitória invertido em maiúscula é: {{ inverterMaiuscula(nome2) }}.</p>
           <p> Exemplo de saudação usando função:</p>
           <p> {{ saudacao() }}  </p>
     </div>
